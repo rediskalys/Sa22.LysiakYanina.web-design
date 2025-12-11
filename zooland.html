@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZooLand</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="logo">
+                <a href="#hero"><img src="images/logo.svg" alt="logo"></a>
+            </div>
+            <input type="checkbox" id="burger-toggle">
+            <label for="burger-toggle" class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="mobile-nav">
+                <a href="#about">About us</a>
+                <a href="#catalog">Catalog</a>
+                <a href="#contacts">Contacts</a>
+            </nav>
+
+            <nav class="nav">
+                <li><a href="#about">About us</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#pricing">Pet sets</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <img src="images/phone-svgrepo-com (1).svg" class="phone">
+            </nav>
+        </div>
+
+                <section id="hero" class="hero">
+            <div class="hero-video">
+                <video autoplay loop muted>
+                    <source src="7080033-uhd_3840_2160_24fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1>ZooLand</h1>
+                <h2>Everything your pet needs all in one place</h2>
+                <button href="#" class="open-form">Contact us</button>
+            </div>
+        </section>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="feedback-form" id="contact-form">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2>Contact Us</h2>
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+380..." required>
+
+                <label for="msg">Message</label>
+                <textarea id="msg" rows="4" placeholder="Write your message"></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        const openFormBtn = document.querySelector('.open-form');
+        const overlay = document.getElementById('overlay');
+        const contactForm = document.getElementById('contact-form');
+        const closeBtn = document.getElementById('close-btn');
+
+        openFormBtn.addEventListener('click', function() {
+            overlay.style.display = 'block'; 
+            contactForm.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            overlay.style.display = 'none';
+            contactForm.style.display = 'none'; 
+        });
+
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none'; 
+            contactForm.style.display = 'none'; 
+        });
+    </script>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Vet-shop ZooLand</h2>
+            <p>At ZooLand, we care about pets like family. We provide trusted food, toys, and supplies to keep them healthy and happy. Our goal is to make pet care simple, reliable, and affordable for every owner.</p>
+            <p>We believe that every pet deserves the best, and we strive to offer products that enhance their well-being. Join us in providing your pet with the love and care they deserve, every step of the way.</p>
+        </div>
+        <div class="about-image">
+            <img src="images/ab.jpg" alt="ab img">
+        </div>
+    </section>
+
+    <section id="catalog" class="catalog">
+        <h2>Catalog</h2>
+        <div class="citems">
+            <div class="citem">
+                <img src="images/food.png" alt="Food">
+                <div class="ctext">Food</div>
+            </div>
+            <div class="citem">
+                <img src="images/bed.jpg" alt="Beds">
+                <div class="ctext">Beds</div>
+            </div>
+            <div class="citem">
+                <img src="images/toy.jpg" alt="Toys">
+                <div class="ctext">Toys</div>
+            </div>
+            <div class="citem">
+                <img src="images/acc.jpg" alt="Accessories">
+                <div class="ctext">Accessories</div>
+            </div>
+            <div class="citem">
+                <img src="images/bowl.jpg" alt="Bowls">
+                <div class="ctext">Bowls</div>
+            </div>
+            <div class="citem">
+                <img src="images/tr.jpg" alt="Treats">
+                <div class="ctext">Treats</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="pricing-container">
+            <h2 class="pricing-title">Ready-made starter kits</h2>
+
+            <div class="prices">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Starter Cat Kit</h3>
+                        <p class="price">$24.99</p>
+                    </div>
+                    <ul class="features">
+                        <li>Dry cat food</li>
+                        <li>Clumping cat litter</li>
+                        <li>Litter tray & scoop</li>
+                        <li>Double food & water bowl</li>
+                        <li>Cat toy (ball or mouse)</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a class="btn">Buy now</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Dog Fun Box</h3>
+                        <p class="price">$29.99</p>
+                    </div>
+                    <ul class="features">
+                        <li>Training treats</li>
+                        <li>Ball or frisbee</li>
+                        <li>Rope tug toy</li>
+                        <li>Waste bags</li>
+                        <li>Basic collar or ID tag</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a class="btn">Buy now</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Small Pet Pack</h3>
+                        <p class="price">$19.99</p>
+                    </div>
+                    <ul class="features">
+                        <li>Complete food mix</li>
+                        <li>Bedding or wood shavings</li>
+                        <li>Water bottle</li>
+                        <li>Small house or tunnel</li>
+                        <li>Chew sticks / mineral stone</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a class="btn">Buy now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h2>Contacts</h2>
+        <ul class="clist">
+            <p>You can visit us at:</p>
+            <li>Paws & Whiskers at 123 Pet Avenue</li>
+            <li>Furry Friends Supplies at 456 Tail Street</li>
+            <p>in Khmelnytskyi or order online</p>
+        </ul>
+        <div class="social">
+            <a class="sq">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+            <a class="sq">
+                <img src="images/facebook-svgrepo-com (1).svg" alt="FaceBook">
+            </a>
+            <a class="sq">
+                <img src="images/youtube-svgrepo-com (1).svg" alt="YouTube">
+            </a>
+            <a class="sq">
+                <img src="images/phone-svgrepo-com (1).svg" alt="Phone">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="ftitle">
+            <img src="images/logo.svg" alt="logo" class="flogo">
+            <h2>ZooLand</h2>
+            </div>
+            <div class="ftext">       
+                <div class="flist">
+                    <p>About us</p>
+                    <p>Contacts</p>
+                    <div class="fsocial">
+                        <a class="sq">
+                            <img src="images/instagram.svg" alt="Instagram">
+                        </a>
+                        <a class="sq">
+                            <img src="images/facebook-svgrepo-com (1).svg" alt="FaceBook">
+                        </a>
+                        <a class="sq">
+                            <img src="images/youtube-svgrepo-com (1).svg" alt="YouTube">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="fcatalog">
+                    <p>Catalog</p>
+                    <ul>
+                        <li>Food</li>
+                        <li>Beds</li>
+                        <li>Toys</li>
+                        <li>Accessories</li>
+                        <li>Bowls</li>
+                        <li>Treats</li>
+                    </ul>
+                </div>
+                <div >
+                    <p>Addresses in Khmelnytskyi: </p>
+                    <ul>
+                        <li>Paws & Whiskers at 123 Pet Avenue</li>
+                        <li>Furry Friends Supplies at 456 Tail Street</li>
+                    </ul>
+                    <p>+380 67 123 45 67</p>
+                    <p>zooland.help@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
