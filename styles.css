@@ -361,7 +361,6 @@ body {
   justify-content: center;
 }
 
-/* контейнер трохи світліший за фон body (#1E3A25) */
 .pricing-container {
   width: 100%;
   background-color: #264a30; 
@@ -376,7 +375,6 @@ body {
   margin-bottom: 32px;
 }
 
-/* картки всередині контейнера */
 .prices {
   display: flex;
   justify-content: space-between;
@@ -428,7 +426,6 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-/* низ картки + повноцінна кнопка */
 .card-footer {
   padding: 20px 24px 24px;
   background: transparent;
@@ -441,9 +438,8 @@ body {
   width: 100%;
   padding: 12px 0;
   border-radius: 20px;
-  background-color: #1E3A25;   /* ті ж кольори */
+  background-color: #1E3A25;
   color: #fff;
-  text-decoration: none;
   font-weight: bold;
   font-size: 22px;
   border: 2px solid #1E3A25;
