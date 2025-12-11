@@ -378,7 +378,6 @@ body {
 .prices {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -403,9 +402,7 @@ body {
 }
 
 .card-header h3 {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 28px;
 }
 
 .price {
@@ -438,8 +435,9 @@ body {
   width: 100%;
   padding: 12px 0;
   border-radius: 20px;
-  background-color: #1E3A25;
+  background-color: #1E3A25; 
   color: #fff;
+  text-decoration: none;
   font-weight: bold;
   font-size: 22px;
   border: 2px solid #1E3A25;
@@ -648,6 +646,40 @@ footer {
     padding: 8px;
   }
 
+  .pricing {
+    padding: 30px 16px; 
+  }
+
+  .pricing-container{
+    padding: 23px 25px;
+  }
+
+  .prices {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 25px; 
+  }
+
+  .pricing-card {
+    width: 95%;
+  }
+
+  .pricing-title {
+    font-size: 24px;
+  }
+
+  .card-header h3 {
+    font-size: 22px; 
+  }
+
+  .price {
+    font-size: 24px; 
+  }
+
+  .per {
+    font-size: 10px; 
+  }
+
   .contacts{
     margin-top: 32px;
     padding: 16px;
@@ -678,42 +710,41 @@ footer {
   }
   .sq img{ width: 28px; height: 28px; }
 
-footer {
+  footer {
     padding: 16px;
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center; 
     gap: 16px; 
-
-.ftitle {
+  }
+  .ftitle {
     font-size: 20px;
     text-align: center; 
     display: flex;
     align-items: center;
     gap: 8px;
-}
+  }
 
-.ftext {
+  .ftext {
     display: flex;
     flex-direction: column; 
     align-items: center; 
     font-size: 14px;
     text-align: center; 
-}
+  }
 
-.fcatalog ul {
+  .fcatalog ul {
     list-style: none; 
     padding: 0;
     text-align: center;
     gap: 10px;
-}
+  }
 
-.fsocial {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
-}
-
+  .fsocial {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
 }
